@@ -1,13 +1,17 @@
+import { ErrorContextProvider } from '../context/ErrorContext';
+import { LoadingContextProvider } from '../context/LoadingContext';
 import { MovieContextprovider } from '../context/MovieContext';
-import './App.css';
+import { MovieWrapper } from './Wrapper/MovieWrapper';
 
 function App() {
   return (
-    <MovieContextprovider>
-      <div className="App">
-        
-     </div>
-    </MovieContextprovider>
+  <MovieContextprovider>
+    <ErrorContextProvider>
+      <LoadingContextProvider>
+        <MovieWrapper/>
+      </LoadingContextProvider>
+    </ErrorContextProvider>
+  </MovieContextprovider>
   );
 }
 

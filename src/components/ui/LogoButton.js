@@ -1,7 +1,7 @@
 import React from 'react'
 
-export const logoButton = () => {
+export const LogoButton = () => {
   return (
-    <div>logoButton</div>
+    <div></div>
   )
 }

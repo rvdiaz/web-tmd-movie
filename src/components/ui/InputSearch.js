@@ -1,7 +1,7 @@
 import React from 'react'
 
-export const inputSearch = () => {
+export const InputSearch = () => {
   return (
-    <div>inputSearch</div>
+    <div>inputSearcI</div>
   )
 }

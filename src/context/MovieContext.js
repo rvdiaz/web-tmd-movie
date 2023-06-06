@@ -25,8 +25,16 @@ export const MovieContextprovider=(props)=>{
         boxOffice:'',
         voteAverage:''
     })
+
+    const handlerChange=(newMovie)=>{
+        setmovieData({
+            ...newMovie,
+            poster_path:'https://image.tmdb.org/t/p/original'+newMovie.poster_path
+        })
+    }
+
     return (
-        <MovieContext.Provider value={{movieData,setmovieData}}>
+        <MovieContext.Provider value={{movieData,handlerChange}}>
             {props.children}
         </MovieContext.Provider>
     )
