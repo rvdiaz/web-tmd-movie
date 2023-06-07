@@ -1,14 +1,21 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { MovieContext } from '../../context/MovieContext';
+import { data, getDefaultUrl } from '../../data/defaultData';
 import { useFetch } from '../hooks/useFetch';
 import { CardMovie } from './CardMovie';
 import { Footer } from './Footer';
 import { Header } from './Header';
 
-export const MovieWrapper = (props) => {    
-    const query='Jack+Reacher';
-    const url=process.env.REACT_APP_BASEURLAPI+`search/movie?query=${query}&api_key=${process.env.REACT_APP_APIKEY}`;
-    useFetch(url);
+export const MovieWrapper = () => {    
+    const query=data.defaultMovie;
+    const url=getDefaultUrl(query);
+    const {fetchData}=useFetch(url);
+
+    useEffect(() => {
+        fetchData();
+    }, [fetchData])
+    
+   
     const {movieData}=useContext(MovieContext);
     const {poster_path}=movieData;
 

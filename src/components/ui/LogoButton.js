@@ -1,7 +1,23 @@
-import React from 'react'
-
+import React, { useCallback } from 'react'
+import logo from '../../assets/images/tmdb.svg';
+import { data, getDefaultUrl } from '../../data/defaultData';
+import { useFetch } from '../hooks/useFetch';
 export const LogoButton = () => {
+  const queryUrl=getDefaultUrl(data.defaultMovie);
+
+  const {fetchData}=useFetch(queryUrl);
+
+  const handleReset=useCallback(()=>{
+      fetchData();
+  },[fetchData])
+
   return (
-    <div></div>
+    <a
+      onClick={handleReset}
+    >
+      <img 
+        src={logo} 
+        className='logo'/>
+    </a>
   )
 }

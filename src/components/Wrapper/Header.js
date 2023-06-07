@@ -4,7 +4,7 @@ import { LogoButton } from '../ui/LogoButton'
 
 export const Header = () => {
   return (
-    <div>
+    <div className="header">
         <LogoButton/>
         <InputSearch/>
     </div>
