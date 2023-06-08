@@ -5,7 +5,7 @@
     color:white;
 }
 body {
-    font-size: 15px;
+    font-size: 16px;
 }
 
 .overflow-Gradient {
@@ -59,9 +59,34 @@ body {
 }
 .movieAdittionalDetails {
     margin-top: 2em;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr;
+}
+.movieAdittionalDetails .additionalDetailsGroup:first-child {
+    grid-area: 1 / 1 / auto / span 2;
+}
+.detailTitles {
+    color: #00FC87;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    font-family: 'Oswald';
+}
+.detailSubtitles {
+    font-size: 1.1rem;
+    color:white;
+    font-weight: 700;
+    font-family: 'Oswald';
 }
 
-.movieGenres{
-    color: #00FC87;
-    font-size: 1.2rem;
+@media screen and (max-width: 768px) {
+    .cardWrapper {
+        grid-template-columns: 1fr;
+    }
+    .movieData {
+        grid-area: 1;
+    }
+    .full-background {
+        height: auto;
+    }
 }

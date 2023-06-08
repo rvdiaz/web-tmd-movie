@@ -1,5 +1,23 @@
 export const data={
-    defaultMovieId:157336
+    defaultMovieId:157336,
+    footerLinks:[
+        {
+            title:'Designed & developed by Stephen Kempin',
+            link:'https://www.stephenkempin.co.uk/'
+        },
+        {
+            title:'Rebuilded by Roberto Valdes',
+            link:'https://robevaldes.com/'
+        },
+        {
+            title:'View original code',
+            link:'https://github.com/SKempin/reactjs-tmdb-app'
+        },
+        {
+            title:'View recreated code',
+            link:'https://github.com/rvdiaz/web-tmd-movie'
+        }
+    ]
 }
 
 export const getDefaultUrl=(id)=>{
@@ -7,3 +25,4 @@ export const getDefaultUrl=(id)=>{
     const url=process.env.REACT_APP_BASEURLAPI+`movie/${id}?&api_key=${process.env.REACT_APP_APIKEY}`;
     return url;
 }
+

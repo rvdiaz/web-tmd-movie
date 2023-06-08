@@ -1,3 +1,4 @@
+import numeral from "numeral";
 import { createContext, useState } from "react";
 
 export const MovieContext=createContext({
@@ -30,7 +31,9 @@ export const MovieContextprovider=(props)=>{
         setmovieData({
             ...newMovie,
             poster_path:'https://image.tmdb.org/t/p/original'+newMovie.poster_path,
-            backdrop_path:'https://image.tmdb.org/t/p/original'+newMovie.backdrop_path
+            backdrop_path:'https://image.tmdb.org/t/p/original'+newMovie.backdrop_path,
+            budget:numeral(newMovie.budget).format('($0,0)'),
+            runtime:newMovie.runtime+' mins'
         })
     }
 
