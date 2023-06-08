@@ -29,7 +29,8 @@ export const MovieContextprovider=(props)=>{
     const handlerChange=(newMovie)=>{
         setmovieData({
             ...newMovie,
-            poster_path:'https://image.tmdb.org/t/p/original'+newMovie.poster_path
+            poster_path:'https://image.tmdb.org/t/p/original'+newMovie.poster_path,
+            backdrop_path:'https://image.tmdb.org/t/p/original'+newMovie.backdrop_path
         })
     }
 

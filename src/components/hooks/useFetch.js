@@ -1,11 +1,11 @@
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { ErrorContext } from "../../context/ErrorContext";
 import { LoadingContext } from "../../context/LoadingContext";
 import { MovieContext } from "../../context/MovieContext";
 
 export const useFetch=(url)=>{
     const {handlerChange}=useContext(MovieContext);
-    const {setloading}=useContext(LoadingContext);
+    const {loading,setloading}=useContext(LoadingContext);
     const {seterror}=useContext(ErrorContext);
     
     const fetchData=async()=>{
@@ -13,8 +13,8 @@ export const useFetch=(url)=>{
             const response=await fetch(url);
             const data=await response.json();
             if(data){
-
-                handlerChange(data.results[0]);
+                console.log(data);
+                handlerChange(data);
                 setloading(false);
             }
         } catch (error) {

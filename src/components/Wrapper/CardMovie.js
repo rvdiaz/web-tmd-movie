@@ -4,7 +4,7 @@ import { MovieImage } from '../ui/MovieImage'
 
 export const CardMovie = () => {
   return (
-    <div>
+    <div className="cardWrapper">
         <MovieImage/>
         <MovieData/>
     </div>

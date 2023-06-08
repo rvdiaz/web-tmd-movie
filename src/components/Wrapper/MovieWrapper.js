@@ -7,28 +7,30 @@ import { Footer } from './Footer';
 import { Header } from './Header';
 
 export const MovieWrapper = () => {    
-    const query=data.defaultMovie;
-    const url=getDefaultUrl(query);
-    const {fetchData}=useFetch(url);
+    const id=data.defaultMovieId;
+    const url=getDefaultUrl(id);
 
+    const {fetchData}=useFetch(url);
     useEffect(() => {
         fetchData();
-    }, [fetchData])
+    }, [url])
     
-   
     const {movieData}=useContext(MovieContext);
+   
     const {poster_path}=movieData;
 
-const styleWrapper={
-    backgroundImage:`url('${poster_path}')`
-}
+    const styleWrapper={
+        backgroundImage:`url('${poster_path}')`
+    }
 
 return (
     <div style={styleWrapper} className="full-background">
-        <div className='movie-card-container'>
-            <Header/>
-            <CardMovie/>
-            <Footer/>
+        <div className='overflow-Gradient'>
+            <div className='movie-card-container'>
+                <Header/>
+                <CardMovie/>
+                <Footer/>
+            </div>
         </div>
     </div>
   )

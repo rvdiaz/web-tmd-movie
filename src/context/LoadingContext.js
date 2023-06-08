@@ -5,7 +5,7 @@ export const LoadingContext=createContext({
 })
 
 export const LoadingContextProvider=(props)=>{
-    const [loading, setloading] = useState(false);
+    const [loading, setloading] = useState(true);
 
     return (
         <LoadingContext.Provider value={{loading,setloading}}>
