@@ -6,12 +6,12 @@ export const data={
             link:'https://www.stephenkempin.co.uk/'
         },
         {
-            title:'Rebuilded by Roberto Valdes',
-            link:'https://robevaldes.com/'
-        },
-        {
             title:'View original code',
             link:'https://github.com/SKempin/reactjs-tmdb-app'
+        },
+        {
+            title:'Rebuilded by Roberto Valdes',
+            link:'https://robevaldes.com/'
         },
         {
             title:'View recreated code',
