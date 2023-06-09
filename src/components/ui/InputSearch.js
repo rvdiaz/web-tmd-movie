@@ -2,6 +2,10 @@ import React from 'react'
 
 export const InputSearch = () => {
   return (
-    <div>inputSearcI</div>
+    <input
+      type='text'
+      className='inputSearch'
+      placeholder='Search Movie Title'
+    />
   )
 }
