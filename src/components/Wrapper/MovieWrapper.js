@@ -10,9 +10,9 @@ export const MovieWrapper = () => {
     const id=data.defaultMovieId;
     const url=getDefaultUrl(id);
 
-    const {fetchData}=useFetch(url);
+    const {fetchData}=useFetch();
     useEffect(() => {
-        fetchData();
+        fetchData(url);
     }, [url])
     
     const {movieData}=useContext(MovieContext);
