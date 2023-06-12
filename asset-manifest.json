@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "//web-tmd-movie/static/css/main.2f81f6dc.css",
+    "main.js": "//web-tmd-movie/static/js/main.8a3bdb9f.js",
+    "static/media/tmdb.svg": "//web-tmd-movie/static/media/tmdb.6852b1ef4cd463c3a6326d990dc4e442.svg",
+    "index.html": "//web-tmd-movie/index.html",
+    "main.2f81f6dc.css.map": "//web-tmd-movie/static/css/main.2f81f6dc.css.map",
+    "main.8a3bdb9f.js.map": "//web-tmd-movie/static/js/main.8a3bdb9f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2f81f6dc.css",
+    "static/js/main.8a3bdb9f.js"
+  ]
+}
