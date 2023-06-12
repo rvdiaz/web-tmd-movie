@@ -1,4 +1,5 @@
 import React, { useContext, useEffect } from 'react'
+import { LoadingContext } from '../../context/LoadingContext';
 import { MovieContext } from '../../context/MovieContext';
 import { data, getDefaultUrl } from '../../data/defaultData';
 import { useFetch } from '../hooks/useFetch';
@@ -22,16 +23,21 @@ export const MovieWrapper = () => {
     const styleWrapper={
         backgroundImage:`url('${poster_path}')`
     }
-
+    const {loading}=useContext(LoadingContext);
+    
 return (
     <div style={styleWrapper} className="full-background">
-        <div className='overflow-Gradient'>
+        {
+        !loading &&
+            <div className='overflow-Gradient'>
             <div className='movie-card-container'>
                 <Header/>
                 <CardMovie/>
                 <Footer/>
             </div>
         </div>
+        }
+        
     </div>
   )
 }

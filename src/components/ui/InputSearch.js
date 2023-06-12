@@ -51,7 +51,7 @@ export const InputSearch = () => {
       results.length>0 &&
       <Menu
         id='menuSearchResults'
-        className='menuSearchResults'
+        className='menuSearchResults animationCard'
       >
       {results.slice(0,5).map((result, index) => {
         return (

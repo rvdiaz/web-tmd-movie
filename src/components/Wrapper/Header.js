@@ -6,7 +6,7 @@ import $ from 'jquery';
 
 export const Header = () => {
   return (
-    <div className="header">
+    <div className="header animationCard">
         <LogoButton/>
         <InputSearch/>
     </div>

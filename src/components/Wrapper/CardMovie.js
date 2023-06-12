@@ -3,8 +3,9 @@ import { MovieData } from '../ui/MovieData'
 import { MovieImage } from '../ui/MovieImage'
 
 export const CardMovie = () => {
+ 
   return (
-    <div className="cardWrapper">
+    <div className="cardWrapper animationCard">
         <MovieImage/>
         <MovieData/>
     </div>
